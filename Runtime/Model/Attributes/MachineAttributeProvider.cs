@@ -82,6 +82,8 @@ namespace Backtrace.Unity.Model.Attributes
 
             attributes["graphic.shader"] = SystemInfo.graphicsShaderLevel.ToString(CultureInfo.InvariantCulture);
             attributes["graphic.topUv"] = SystemInfo.graphicsUVStartsAtTop.ToString(CultureInfo.InvariantCulture);
+            attributes["graphic.dpi"] = Screen.dpi.ToString(CultureInfo.InvariantCulture);
+            attributes["graphic.refresh"] = Screen.currentResolution.refreshRate.ToString(CultureInfo.InvariantCulture);
         }
 
         private string GenerateMachineId()

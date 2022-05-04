@@ -18,6 +18,8 @@ namespace Backtrace.Unity.Model.Attributes
                     : SystemInfo.batteryLevel * 100;
             attributes["battery.level"] = batteryLevel.ToString(CultureInfo.InvariantCulture);
             attributes["battery.status"] = SystemInfo.batteryStatus.ToString();
+            attributes["graphic.fullscreen"] = Screen.fullScreen.ToString(CultureInfo.InvariantCulture);
+            attributes["graphic.orientation"] = Screen.orientation.ToString();
         }
     }
 }

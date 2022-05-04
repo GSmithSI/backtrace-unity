@@ -32,6 +32,9 @@ namespace Backtrace.Unity.Model.Attributes
 #if !UNITY_SWITCH
             attributes["application.temporary_cache"] = Application.temporaryCachePath;
 #endif
+#if UNITY_IOS || UNITY_ANDROID
+            attributes["build.guid"] = Application.buildGUID;
+#endif
         }
 
 
